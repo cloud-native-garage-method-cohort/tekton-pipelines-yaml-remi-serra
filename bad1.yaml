@@ -1,3 +1,4 @@
+---
 apiVersion: tekton.dev/v1beta1
 kind: Pipeline
 metadata:
@@ -13,8 +14,8 @@ spec:
         - name: url
           value: "$(params.source-repo)"
       taskRef:
-       name: git-clone
-       kind: Task
+        name: git-clone
+        kind: Task
       workspaces:
         - name: shared-workspace
           workspace: pipeline-shared-data
