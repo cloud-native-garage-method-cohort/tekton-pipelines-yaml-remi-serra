@@ -13,17 +13,17 @@ spec:
         - name: url
           value: "$(params.source-repo)"
       taskRef:
-       name: git-clone
-       kind: ClusterTask
+        name: git-clone
+        kind: ClusterTask
       workspaces:
         - name: output
           workspace: pipeline-shared-data
     - name: lint
-      runAfter: 
-       - clone
-      taskRef: 
-       name: yaml-lint
-       kind: Task
+      runAfter:
+        - clone
+      taskRef:
+        name: yaml-lint
+        kind: Task
       workspaces:
         - name: shared-workspace
           workspace: pipeline-shared-data
