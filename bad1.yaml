@@ -14,13 +14,9 @@ spec:
           value: "$(params.source-repo)"
       taskRef:
        name: git-clone
-       name: markdown-lint
        kind: Task
-      - workspaces:
+      workspaces:
         - name: shared-workspace
           workspace: pipeline-shared-data
-      params:
-        - name: args
-          value: ["."]
   workspaces:
     - name: pipeline-shared-data

@@ -1,6 +1,6 @@
 apiVersion: tekton.dev/v1beta1
-    name: markdown-linting
-  workspaces:
+name: markdown-linting
+workspaces:
     - name: pipeline-shared-data
       volumeClaimTemplate:
         spec:
